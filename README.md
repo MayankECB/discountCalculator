@@ -51,5 +51,8 @@ How to Run the Application
 2. Navigate to the Project Directory: cd discountCalculator
 3. Build the Application: Make sure Maven is installed on your system : mvn clean install
 4. Run the Application: mvn spring-boot:run
+   The application will start on http://localhost:8080/.
+5. Command to run test cases with code coverage: mvn test
+
    
-The application will start on http://localhost:8080/.
+
