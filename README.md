@@ -26,24 +26,9 @@ Technologies Used
 	4. Maven for build and dependency management
 	
 How to Run the Application
-Clone the Repository:
-
-bash
-Copy code
-git clone https://github.com/MayankECB/discountCalculator.git
-Navigate to the Project Directory:
-
-bash
-Copy code
-cd discountCalculator
-Build the Application: Make sure Maven is installed on your system.
-
-bash
-Copy code
-mvn clean install
-Run the Application:
-
-bash
-Copy code
-mvn spring-boot:run
+1. Clone the Repository: git clone https://github.com/MayankECB/discountCalculator.git
+2. Navigate to the Project Directory: cd discountCalculator
+3. Build the Application: Make sure Maven is installed on your system : mvn clean install
+4. Run the Application: mvn spring-boot:run
+   
 The application will start on http://localhost:8080/.
