@@ -24,7 +24,28 @@ Technologies Used :
 2. Spring Boot 3.x
 3. JUnit 5 for testing
 4. Maven for build and dependency management
-	
+
+Project Structure
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── calculate/
+│   │       	└── discount/
+│   │           	├── model/              # Contains Bill and Invoice models
+│   │           	├── strategy/           # Discount Strategy implementation
+│   │           	├── service/            # Discount calculation service (Async)
+│   │           	└── DiscountCalculatorApplication.java  # Main class
+│   └── resources/
+│       └── application.properties      # Spring Boot configurations
+├── test/                               # Unit tests
+│   └── java/
+│       └── com/
+│   │       └── calculate/
+│   │       	└── discount/
+│   |             	└── DiscountCalculatorApplicationTests.java  # Test cases for discount logic
+└── pom.xml                             # Project dependencies and build config
+
 How to Run the Application
 1. Clone the Repository: git clone https://github.com/MayankECB/discountCalculator.git
 2. Navigate to the Project Directory: cd discountCalculator
