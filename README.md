@@ -19,11 +19,11 @@ Key Features
 
 The application ensures that the correct discount is applied in an optimized and asynchronous manner using Spring Boot.
 
-Technologies Used
-	1. Java 17
-	2. Spring Boot 3.x
-	3. JUnit 5 for testing
-	4. Maven for build and dependency management
+Technologies Used :
+1. Java 17
+2. Spring Boot 3.x
+3. JUnit 5 for testing
+4. Maven for build and dependency management
 	
 How to Run the Application
 1. Clone the Repository: git clone https://github.com/MayankECB/discountCalculator.git
