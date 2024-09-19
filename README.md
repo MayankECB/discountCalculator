@@ -1,58 +1,68 @@
-##Discount Calculator - README
-#Overview
-This project is a Spring Boot-based application that calculates the net payable amount for a user based on several discount rules for a retail store. The application follows an object-oriented design and utilizes asynchronous programming for discount calculation.
 
-#Key Features
-1. Percentage-based Discounts:
-   -30% discount for store employees.
-   -10% discount for store affiliates.
-   -5% discount for customers who have been shopping for over 2 years.
+# The Retail Store Discounts
 
-3. Fixed Discounts:
-	a. $5 discount for every $100 spent (e.g., for $990, you get $45 as a discount).
 
-4. Groceries Exclusion:
-	a. Percentage-based discounts do not apply to groceries.
 
-5. Single Percentage Discount Policy:
-	a. A user can only receive one of the available percentage-based discounts on a bill.
 
-The application ensures that the correct discount is applied in an optimized and asynchronous manner using Spring Boot.
+## Overview
+This project is a Spring Boot application, designed to calculate the net payable amount for a user on a retail website. 
+It considers multiple discount rules including percentage-based discounts (for employees, affiliates, or long-term customers) and a fixed discount for every $100 on the bill. 
+The application uses asynchronous programming to process discount calculations in the background.
 
-Technologies Used :
-1. Java 17
-2. Spring Boot 3.x
-3. JUnit 5 for testing
-4. Maven for build and dependency management
+## Key Features:
+#### 1. Percentage-Based Discounts:
+ - Employees get a 30% discount.
+ - Affiliates get a 10% discount.
+ - Customers with over 2 years of loyalty get a 5% discount.
+ - Only one percentage-based discount is applicable per bill, and no percentage discount applies to groceries.
 
-Project Structure
-src/
-├── main/
-│   ├── java/
-│   │   └── com/
-│   │       └── calculate/
-│   │       	└── discount/
-│   │           	├── model/              # Contains Bill and Invoice models
-│   │           	├── strategy/           # Discount Strategy implementation
-│   │           	├── service/            # Discount calculation service (Async)
-│   │           	└── DiscountCalculatorApplication.java  # Main class
-│   └── resources/
-│       └── application.properties      # Spring Boot configurations
-├── test/                               # Unit tests
-│   └── java/
-│       └── com/
-│   │       └── calculate/
-│   │       	└── discount/
-│   |             	└── DiscountCalculatorApplicationTests.java  # Test cases for discount logic
-└── pom.xml                             # Project dependencies and build config
+#### 2. Fixed Discount:
+ - A $5 discount is applied for every $100 spent.
 
-How to Run the Application
-1. Clone the Repository: git clone https://github.com/MayankECB/discountCalculator.git
-2. Navigate to the Project Directory: cd discountCalculator
-3. Build the Application: Make sure Maven is installed on your system : mvn clean install
-4. Run the Application: mvn spring-boot:run
-   The application will start on http://localhost:8080/.
-5. Command to run test cases with code coverage: mvn test
+#### 3. Asynchronous Processing:
+ - Discounts are calculated asynchronously to improve performance.
 
-   
+#### 4. Unit Testing:
+ - Comprehensive test coverage using JUnit to validate various discount scenarios.
+      
+## Project Structure
+```md
+src
+├── main
+│   ├── java
+│   │   ├── com.example.retaildiscount
+│   │   │   ├── RetailDiscountApplication.java      # Main Spring Boot Application Class
+│   │   │   ├── model
+│   │   │   │   ├── User.java                      # User class that stores user information
+│   │   │   │   ├── Bill.java                      # Bill class that stores the bill amount and type
+│   │   │   ├── service
+│   │   │   │   ├── DiscountService.java           # Core service to calculate discounts asynchronously
+│   │   │   ├── strategy
+│   │   │   │   ├── DiscountStrategy.java          # Interface for different discount strategies
+│   │   │   │   ├── PercentageDiscountStrategy.java # Implementation for percentage-based discount
+│   │   │   │   ├── FixedAmountDiscountStrategy.java # Implementation for fixed discount
+├── test
+│   ├── java
+│   │   ├── com.example.retaildiscount
+│   │   │   ├── DiscountServiceTest.java           # JUnit test cases for discount calculation
+```
+## Prerequisites
+To build and run this project, you will need:
+ - Java 11 or higher
+- Maven 3.6 or higher
+- Spring Boot 2.7.x or higher
+## Build and Run
+#### Step 1: Clone the repository
 
+ - git clone https://github.com/MayankECB/discountCalculator.git
+ - cd discountCalculator
+
+#### Step 2: Build the project using Maven
+ - mvn clean install
+
+#### Step 3: Run the Spring Boot application
+ - mvn spring-boot:run
+The application will start on http://localhost:8080/
+
+#### Step 4 : Run test cases with code coverage
+ - mvn test
