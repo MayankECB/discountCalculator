@@ -60,6 +60,11 @@ src
 │   │   ├── com.calculte.discount
 │   │   │   ├── DiscountCalculatorApplicationTests.java           # JUnit test cases for discount calculation
 ```
+
+#### UML 
+![alt text](https://github.com/MayankECB/discountCalculator/blob/master/src/main/resources/UML%20diagram.jpg?raw=true)
+
+
 ## Technologies Used
  - **Java** 11 or later
 - **Maven** for dependency management and project build
