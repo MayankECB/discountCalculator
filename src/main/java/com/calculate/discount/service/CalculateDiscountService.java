@@ -24,8 +24,8 @@ public class CalculateDiscountService {
 	
 	@Async
     public CompletableFuture<Double> calculateNetAmount(User user, Invoice invoice) {
-        double percentageDiscountedAmount = percentageDiscountStrategyImplementation.applyDiscount(user, invoice);
-        double fixedDiscountedAmount = fixedDiscountStrategyImplementation.applyDiscount(user, new Invoice(percentageDiscountedAmount, invoice.isGroceryPresent()));
+        percentageDiscountStrategyImplementation.applyDiscount(user, invoice);
+        double fixedDiscountedAmount = fixedDiscountStrategyImplementation.applyDiscount(user, invoice);
 
         return CompletableFuture.completedFuture(fixedDiscountedAmount);
     }

@@ -1,26 +1,19 @@
 package com.calculate.discount.model;
 
 public class User {
-	private boolean isEmployee;
-	private boolean isAffiliate;
-	private boolean isCustomerTenureOverTwoYears;
+	private String userId;
 	
-	public User(boolean isEmployee, boolean isAffiliate, boolean isCustomerTenureOverTwoYears) {
+	public User(String userId) {
 		super();
-		this.isEmployee = isEmployee;
-		this.isAffiliate = isAffiliate;
-		this.isCustomerTenureOverTwoYears = isCustomerTenureOverTwoYears;
+		this.userId = userId;
 	}
 
-	public boolean isEmployee() {
-		return isEmployee;
+	public String getUserId() {
+		return userId;
 	}
 
-	public boolean isAffiliate() {
-		return isAffiliate;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
-	public boolean isCustomerTenureOverTwoYears() {
-		return isCustomerTenureOverTwoYears;
-	}
 }
