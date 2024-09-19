@@ -1,13 +1,39 @@
 
 # The Retail Store Discounts
 
-
-
-
 ## Overview
 This project is a Spring Boot application, designed to calculate the net payable amount for a user on a retail website. 
 It considers multiple discount rules including percentage-based discounts (for employees, affiliates, or long-term customers) and a fixed discount for every $100 on the bill. 
 The application uses asynchronous programming to process discount calculations in the background.
+
+## Technologies Used
+ - **Java** 11 or later
+- **Maven** for dependency management and project build
+- **Spring Boot** for the application framework
+- **JUnit5** for unit testing
+
+## Installation & Setup
+#### Prerequisites
+Ensure you have the following installed:
+ - Java 11 or later
+ - Maven
+ - An IDE such as IntelliJ IDEA or Eclipse (optional, but recommended)
+
+## Steps to Set Up:
+#### Step 1: Clone the repository
+
+ - git clone https://github.com/MayankECB/discountCalculator.git
+ - cd discountCalculator
+
+#### Step 2: Build the project using Maven
+ - mvn clean install
+
+#### Step 3: Run the Application: You can run the Spring Boot application using the following command:
+ - mvn spring-boot:run
+ - The application will start on http://localhost:8080/
+
+#### Step 4 : Run test cases with code coverage
+ - mvn test
 
 ## Key Features:
 #### Percentage-Based Discounts:
@@ -64,35 +90,6 @@ src
 #### UML 
 ![alt text](https://github.com/MayankECB/discountCalculator/blob/master/src/main/resources/UML%20diagram.jpg?raw=true)
 
-
-## Technologies Used
- - **Java** 11 or later
-- **Maven** for dependency management and project build
-- **Spring Boot** for the application framework
-- **JUnit5** for unit testing
-
-## Installation & Setup
-#### Prerequisites
-Ensure you have the following installed:
- - Java 11 or later
- - Maven
- - An IDE such as IntelliJ IDEA or Eclipse (optional, but recommended)
-
-## Steps to Set Up:
-#### Step 1: Clone the repository
-
- - git clone https://github.com/MayankECB/discountCalculator.git
- - cd discountCalculator
-
-#### Step 2: Build the project using Maven
- - mvn clean install
-
-#### Step 3: Run the Application: You can run the Spring Boot application using the following command:
- - mvn spring-boot:run
- - The application will start on http://localhost:8080/
-
-#### Step 4 : Run test cases with code coverage
- - mvn test
 
 ## Usage
 This application calculates the net payable amount based on the following rules:
