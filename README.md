@@ -74,13 +74,16 @@ src
 │   │   │   ├── DiscountCalculatorApplication.java      # Main Spring Boot Application Class
 │   │   │   ├── model
 │   │   │   │   ├── User.java                      # User class that stores user information
-│   │   │   │   ├── Invoice.java                      # Bill class that stores the bill amount and type
+│   │   │   │   ├── Product.java                      # Product class that stores product information present in invoice
+│   │   │   │   ├── Invoice.java                      # Invoice class that stores the bill amount and type
 │   │   │   ├── service
 │   │   │   │   ├── CalculateDiscountService.java           # Core service to calculate discounts asynchronously
 │   │   │   ├── strategy
 │   │   │   │   ├── CalculateDiscountStrategy.java          # Interface for different discount strategies
 │   │   │   │   ├── PercentageDiscountStrategyImplementation.java # Implementation for percentage-based discount
 │   │   │   │   ├── FixedAmountDiscountStrategyImplementation.java # Implementation for fixed discount
+│   │   │   ├── Utility
+│   │   │   │   ├── Utility.java           # Class contains utility methods 
 ├── test
 │   ├── java
 │   │   ├── com.calculte.discount
