@@ -91,8 +91,10 @@ src
 ```
 
 #### UML 
-![alt text](https://github.com/MayankECB/discountCalculator/blob/master/src/main/resources/UML%20diagram.jpg?raw=true)
+![alt text](https://github.com/MayankECB/discountCalculator/blob/master/src/main/resources/UML-diagram.jpg?raw=true)
 
+#### Assumption
+SQL Database is in place and we will use userid to get whether user is an employee or an affiliate or customer over 2 years from database
 
 ## Usage
 This application calculates the net payable amount based on the following rules:
@@ -110,6 +112,10 @@ The application accepts two inputs:
 For a user who is an employee and has a bill of $990 (non-grocery):
  - A 30% discount is applied to the bill, bringing it down to $693.
  - A fixed discount of $45 (for every $100) is applied, resulting in a final bill of $648.
+
+For a user who is an employee and has a bill of $1000 (with 200$ as grocery):
+ - A 30% discount is applied to the bill of 800$, bringing it down to $560.
+ - A fixed discount of $35 (for every $100) is applied, resulting in a final bill of $725.
 
 ## Asynchronous Processing
 The discount calculation is handled asynchronously using Spring's @Async annotation, which improves performance in scenarios with large calculations or when processing multiple discount requests concurrently.
